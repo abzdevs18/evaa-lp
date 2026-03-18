@@ -96,56 +96,145 @@ function initForms() {
 
 function initCarousel() {
   const track = document.querySelector('.carousel-track');
-  const cards = document.querySelectorAll('.carousel-card');
+  const cards = Array.from(document.querySelectorAll('.carousel-card'));
   const btnPrev = document.querySelector('.btn-carousel-action.prev');
   const btnNext = document.querySelector('.btn-carousel-action.next');
 
   if (!track || cards.length === 0) return;
 
-  function centerCard(card, behavior = 'smooth') {
-    if (!card || !track) return;
-    const scrollLeft = card.offsetLeft - track.clientWidth / 2 + card.clientWidth / 2;
-    track.scrollTo({ left: scrollLeft, behavior });
+  // Configuration
+  const CARD_WIDTH = 320;
+  const CARD_GAP = 32;
+  const ACTIVE_SCALE = 1.0;
+  const ADJACENT_SCALE = 0.82;
+  const FAR_SCALE = 0.75;
+  const DURATION = 0.6;
+  const EASE = 'power3.inOut';
+
+  // Find initial active index
+  let activeIndex = cards.findIndex((c) => c.hasAttribute('data-initial-active'));
+  if (activeIndex === -1) activeIndex = Math.floor(cards.length / 2);
+
+  let isAnimating = false;
+
+  // Position all cards based on the active index
+  function layoutCards(animate = true) {
+    const dur = animate ? DURATION : 0;
+
+    cards.forEach((card, i) => {
+      const offset = i - activeIndex;
+      const absOffset = Math.abs(offset);
+
+      // Calculate x position: each card offset by card width + gap
+      const x = offset * (CARD_WIDTH + CARD_GAP);
+
+      // Scale: active = 1.0, adjacent = 0.82, further = 0.75
+      let scale = FAR_SCALE;
+      if (absOffset === 0) scale = ACTIVE_SCALE;
+      else if (absOffset === 1) scale = ADJACENT_SCALE;
+
+      // Z-index: active on top, adjacent next, others behind
+      const zIndex = absOffset === 0 ? 15 : Math.max(1, 10 - absOffset);
+
+      // Box shadow: prominent only on active
+      const shadow =
+        absOffset === 0
+          ? '0 28px 64px rgba(12,30,66,0.3)'
+          : '0 6px 20px rgba(0,0,0,0.1)';
+
+      // Animate the card position and scale
+      gsap.to(card, {
+        x,
+        scale,
+        zIndex,
+        boxShadow: shadow,
+        duration: dur,
+        ease: EASE,
+        overwrite: 'auto',
+      });
+
+      // Animate the wash overlay (opacity: 0 for active, 1 for inactive)
+      const wash = card.querySelector('.card-wash');
+      if (wash) {
+        gsap.to(wash, {
+          opacity: absOffset === 0 ? 0 : 1,
+          duration: dur,
+          ease: EASE,
+          overwrite: 'auto',
+        });
+      }
+
+      // Animate the ribbon height
+      const ribbon = card.querySelector('.card-ribbon');
+      if (ribbon) {
+        gsap.to(ribbon, {
+          height: absOffset === 0 ? 85 : 70,
+          background: absOffset === 0 ? '#c9a84c' : 'rgba(201,168,76,0.8)',
+          duration: dur,
+          ease: EASE,
+          overwrite: 'auto',
+        });
+      }
+    });
   }
 
-  // Initial scroll center on load
-  setTimeout(() => {
-    const initialCard =
-      document.querySelector('.carousel-card.active') || cards[2] || cards[0];
-    centerCard(initialCard, 'instant');
-  }, 150);
+  // Navigate to a specific index
+  function goTo(index) {
+    if (isAnimating || index < 0 || index >= cards.length || index === activeIndex) return;
+    isAnimating = true;
+    activeIndex = index;
+    layoutCards(true);
+    // Unlock after animation completes
+    gsap.delayedCall(DURATION, () => {
+      isAnimating = false;
+    });
+  }
 
-  // Observer to detect center card
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          cards.forEach((c) => c.classList.remove('active'));
-          entry.target.classList.add('active');
-        }
-      });
-    },
-    { root: track, threshold: 0.75 }
-  );
+  // Initial layout without animation
+  layoutCards(false);
 
-  cards.forEach((card) => observer.observe(card));
-
-  // Click a card to scroll it to center
-  cards.forEach((card) => {
-    card.addEventListener('click', () => centerCard(card, 'smooth'));
+  // Click a card to navigate to it
+  cards.forEach((card, i) => {
+    card.addEventListener('click', () => goTo(i));
   });
 
   // Navigation Buttons
-  if (btnPrev && btnNext) {
-    btnPrev.addEventListener('click', () => {
-      const activeIndex = Array.from(cards).findIndex((c) => c.classList.contains('active'));
-      if (activeIndex > 0) centerCard(cards[activeIndex - 1], 'smooth');
-    });
-    btnNext.addEventListener('click', () => {
-      const activeIndex = Array.from(cards).findIndex((c) => c.classList.contains('active'));
-      if (activeIndex < cards.length - 1) centerCard(cards[activeIndex + 1], 'smooth');
-    });
+  if (btnPrev) {
+    btnPrev.addEventListener('click', () => goTo(activeIndex - 1));
   }
+  if (btnNext) {
+    btnNext.addEventListener('click', () => goTo(activeIndex + 1));
+  }
+
+  // Keyboard navigation
+  track.setAttribute('tabindex', '0');
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(activeIndex - 1);
+    if (e.key === 'ArrowRight') goTo(activeIndex + 1);
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+  track.addEventListener(
+    'touchstart',
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+  track.addEventListener(
+    'touchend',
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goTo(activeIndex + 1);
+        else goTo(activeIndex - 1);
+      }
+    },
+    { passive: true }
+  );
 }
 
 // ─── GSAP Animations ──────────────────────────────────────────────────────────
