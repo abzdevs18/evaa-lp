@@ -174,7 +174,7 @@ function initCarousel() {
       if (ribbon) {
         gsap.to(ribbon, {
           height: absOffset === 0 ? 85 : 70,
-          background: absOffset === 0 ? '#c9a84c' : 'rgba(201,168,76,0.8)',
+          background: absOffset === 0 ? '#FFD600' : 'rgba(255,214,0,0.8)',
           duration: dur,
           ease: EASE,
           overwrite: 'auto',
