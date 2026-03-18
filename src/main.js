@@ -356,33 +356,7 @@ function initAnimations() {
     });
   });
 
-  // ── Carousel Cards ────────────────────────────────────────────────────────
-  const carouselSection = document.querySelector('.programs-section');
-  if (carouselSection) {
-    gsap.from('.programs-section .section-title', {
-      scrollTrigger: {
-        trigger: '.programs-section',
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      y: 25,
-      duration: 0.6,
-    });
-
-    gsap.from('.carousel-card', {
-      scrollTrigger: {
-        trigger: '.carousel-track',
-        start: 'top 85%',
-        toggleActions: 'play none none none',
-      },
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-      stagger: 0.08,
-      duration: 0.6,
-    });
-  }
+  // ── Carousel Cards (positions handled by initCarousel GSAP) ────────────
 
   // ── Icon Text Rows (Mission section) ──────────────────────────────────────
   document.querySelectorAll('.icon-text-row').forEach((row, i) => {
