@@ -66,34 +66,31 @@ export function content() {
                 <div class="title-rule"></div>
                 
                 <div class="grid grid-3 mt-32">
-                    <div class="card accent-top">
-                        <div class="icon-circle mx-auto">
-                            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM6.5 19a.5.5 0 0 1 0-1H20v1H6.5z"/></svg>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM6.5 19a.5.5 0 0 1 0-1H20v1H6.5z"/></svg>
                         </div>
                         <h3>Rigorous Academics</h3>
-                        <p>We deliver a comprehensive, DepEd-recognized curriculum enriched by the Adventist philosophy of learning. From Grades 7 through 12, our bilingual instruction in English and Filipino ensures students are well-prepared for any collegiate pathway.</p>
-                        <p>Beyond standard textbooks, our classrooms emphasize critical thinking, moral development, and civic responsibility. Each subject is taught from a perspective that highlights the character of Christ.</p>
-                        <p>Our dedicated faculty go above and beyond to provide individualized attention, ensuring that every learner achieves their highest academic potential and is prepared to become a leader in their community.</p>
+                        <p>A DepEd-recognized curriculum from Grades 7-12, enriched by the Adventist philosophy of learning. Our bilingual instruction emphasizes critical thinking, moral development, and individualized attention.</p>
+                        <a href="/academics" data-link class="pillar-link">Explore Academics &#8594;</a>
                     </div>
                     
-                    <div class="card accent-top">
-                        <div class="icon-circle mx-auto">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                         </div>
                         <h3>A Home Away From Home</h3>
-                        <p>Our campus offers a structured, safe, and nurturing boarding environment, featuring separate supervised dormitories for boys and girls. We cultivate independence, teaching vital life skills such as time management, budgeting, and campus care.</p>
-                        <p>Surrounded by the natural beauty of our hilltop location, students are protected from the distractions of the city. This sanctuary fosters a close-knit, supportive community that thrives on positive peer interaction.</p>
-                        <p>Boarding life at EVAA creates lifelong friendships. With guided routines and weekend activities, students learn what it truly means to live together in mutual respect and shared responsibility.</p>
+                        <p>Structured, safe boarding with separate supervised dormitories. Our hilltop campus fosters a close-knit community where students build lifelong friendships and vital life skills.</p>
+                        <a href="/campus" data-link class="pillar-link">Discover Campus &#8594;</a>
                     </div>
 
-                    <div class="card accent-top">
-                        <div class="icon-circle mx-auto">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> <!-- Placeholder for flame/cross -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </div>
                         <h3>Faith at the Center</h3>
-                        <p>Spiritual growth is at the core of our educational model. Rooted in the Seventh-day Adventist faith, our students engage in daily worship, meaningful Bible study, and an uplifting Week of Prayer.</p>
-                        <p>Our campus church is the heart of school life, where young people discover the joy of keeping the Sabbath and developing a personal, enduring relationship with their Creator.</p>
-                        <p>We actively encourage a lifestyle of selfless service and outreach. By applying Christian principles to real-world challenges, EVAA graduates are equipped to witness powerfully to a living God.</p>
+                        <p>Daily worship, meaningful Bible study, and an uplifting Week of Prayer. Our campus church is the heart of school life, nurturing a personal relationship with the Creator.</p>
+                        <a href="/spiritual-life" data-link class="pillar-link">Explore Spiritual Life &#8594;</a>
                     </div>
                 </div>
             </div>

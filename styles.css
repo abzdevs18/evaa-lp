@@ -231,6 +231,27 @@ textarea.form-control { resize: vertical; }
 .icon-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--gold-text); }
 .icon-circle svg { width: 24px; height: 24px; fill: currentColor; }
 
+/* PILLAR CARDS */
+.pillar-card {
+  background: var(--white); border-radius: 16px; padding: 36px 28px; text-align: center;
+  border: 1px solid var(--border); box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; height: 100%;
+}
+.pillar-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(15,34,72,0.1); }
+.pillar-icon {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--navy);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
+  color: var(--gold); box-shadow: 0 4px 16px rgba(15,34,72,0.15);
+}
+.pillar-icon svg { width: 28px; height: 28px; }
+.pillar-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 12px; }
+.pillar-card p { color: var(--text-body); font-size: 14px; line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+.pillar-link {
+  color: var(--navy); font-size: 13px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; transition: color 0.2s; margin-top: auto;
+}
+.pillar-link:hover { color: var(--gold-text); }
+
 /* NEWS CARDS */
 .news-card { display: flex; flex-direction: column; padding: 20px; border-bottom: 1px solid var(--border); gap: 12px; background: var(--white); }
 .news-card:last-child { border-bottom: none; }

@@ -263,11 +263,12 @@ function initPageAnimations() {
     });
   });
 
-  // ── Cards
-  document.querySelectorAll('.card.accent-top').forEach((card, i) => {
+  // ── Pillar Cards
+  document.querySelectorAll('.pillar-card').forEach((card, i) => {
     gsap.from(card, {
       scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
-      opacity: 0, y: 40, duration: 0.6, delay: i * 0.1,
+      opacity: 0, y: 40, duration: 0.6, delay: i * 0.15,
+      clearProps: 'transform,opacity',
     });
   });
 
