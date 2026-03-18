@@ -9,11 +9,17 @@ gsap.registerPlugin(ScrollTrigger);
 // ─── Layout Shell ─────────────────────────────────────────────────────────────
 
 function initShell() {
+  // Render header directly (not inside wrapper) so navbar sticky works
   const headerEl = document.getElementById('site-header');
-  const footerEl = document.getElementById('site-footer');
+  if (headerEl) {
+    headerEl.outerHTML = renderHeader();
+  }
 
-  if (headerEl) headerEl.innerHTML = renderHeader();
-  if (footerEl) footerEl.innerHTML = renderFooter();
+  // Render footer directly
+  const footerEl = document.getElementById('site-footer');
+  if (footerEl) {
+    footerEl.outerHTML = renderFooter();
+  }
 }
 
 // ─── Navigation Logic ─────────────────────────────────────────────────────────
@@ -360,14 +366,7 @@ function initPageAnimations() {
     });
   });
 
-  // ── Footer
-  const footer = document.querySelector('.footer');
-  if (footer) {
-    gsap.from('.footer-grid > *', {
-      scrollTrigger: { trigger: '.footer', start: 'top 90%', toggleActions: 'play none none none' },
-      opacity: 0, y: 25, stagger: 0.1, duration: 0.5,
-    });
-  }
+  // Footer is a persistent element (not inside page-content), no animation needed
 }
 
 // ─── After Navigation Hook ────────────────────────────────────────────────────
