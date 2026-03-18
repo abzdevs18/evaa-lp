@@ -136,11 +136,11 @@ function initCarousel() {
       // Z-index: active on top, adjacent next, others behind
       const zIndex = absOffset === 0 ? 15 : Math.max(1, 10 - absOffset);
 
-      // Box shadow: prominent only on active
+      // Box shadow: subtle on all cards, no heavy blue shadow
       const shadow =
         absOffset === 0
-          ? '0 28px 64px rgba(12,30,66,0.3)'
-          : '0 6px 20px rgba(0,0,0,0.1)';
+          ? '0 4px 16px rgba(0,0,0,0.1)'
+          : '0 2px 8px rgba(0,0,0,0.06)';
 
       // Animate the card position and scale
       gsap.to(card, {
