@@ -59,7 +59,7 @@ async function transitionTo(pageModule, isInitial = false) {
   if (isInitial) {
     // First load: just render and animate in
     container.innerHTML = `<main>${pageModule.content()}</main>`;
-    gsap.from(container, {
+    gsap.from('main', {
       opacity: 0,
       y: 15,
       duration: 0.4,
@@ -69,24 +69,27 @@ async function transitionTo(pageModule, isInitial = false) {
     return;
   }
 
-  // Animate out
-  await gsap.to(container, {
-    opacity: 0,
-    y: -10,
-    duration: 0.25,
-    ease: 'power2.in',
-  });
+  // Animate out the current main content (not the container)
+  const currentMain = container.querySelector('main');
+  if (currentMain) {
+    await gsap.to(currentMain, {
+      opacity: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    });
+  }
 
-  // Swap content
+  // Swap content and scroll to top
   container.innerHTML = `<main>${pageModule.content()}</main>`;
   window.scrollTo({ top: 0, behavior: 'instant' });
 
-  // Animate in
-  gsap.fromTo(
-    container,
-    { opacity: 0, y: 15 },
-    { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }
-  );
+  // Animate in new content
+  gsap.from('main', {
+    opacity: 0,
+    y: 12,
+    duration: 0.35,
+    ease: 'power2.out',
+  });
 
   if (onAfterNavigate) onAfterNavigate();
 }
