@@ -355,7 +355,66 @@ export function content() {
             </div>
         </section>
 
-        <!-- Section 8: CTA Banner -->
+        <!-- Section 8: Mobile App Download -->
+        <section class="app-download-section">
+            <div class="container">
+                <div class="app-download-grid">
+                    <div class="app-download-content">
+                        <div class="section-label">Stay Connected</div>
+                        <h2 class="section-title" style="color: var(--white);">EVAA Mobile App</h2>
+                        <div class="title-rule left" style="margin-bottom: 24px;"></div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 24px;">Access your grades, schedules, announcements, and campus resources anytime, anywhere. Our official mobile app is designed for the entire EVAA community.</p>
+                        <div class="app-roles">
+                            <div class="app-role-tag">Students</div>
+                            <div class="app-role-tag">Faculty</div>
+                            <div class="app-role-tag">Admin</div>
+                            <div class="app-role-tag">Staff</div>
+                        </div>
+                        <ul class="app-features-list">
+                            <li>&#10003; View grades and class schedules</li>
+                            <li>&#10003; Receive campus announcements</li>
+                            <li>&#10003; Access school calendar and events</li>
+                            <li>&#10003; Connect with the EVAA community</li>
+                        </ul>
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="google-play-btn">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.3 2.3-8.636-8.632z"/></svg>
+                            <div>
+                                <span class="play-label">GET IT ON</span>
+                                <span class="play-store">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="app-download-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <svg viewBox="0 0 100 120" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M50 0 L100 20 L100 60 C100 90 50 120 50 120 C50 120 0 90 0 60 L0 20 Z" fill="var(--navy)" stroke="#FFD600" stroke-width="4"/>
+                                        <rect x="46" y="20" width="8" height="60" fill="#FFD600"/>
+                                        <rect x="30" y="40" width="40" height="8" fill="#FFD600"/>
+                                    </svg>
+                                    <span>EVAA App</span>
+                                </div>
+                                <div class="phone-menu-item">
+                                    <span class="phone-icon">&#128218;</span> My Grades
+                                </div>
+                                <div class="phone-menu-item">
+                                    <span class="phone-icon">&#128197;</span> Class Schedule
+                                </div>
+                                <div class="phone-menu-item">
+                                    <span class="phone-icon">&#128276;</span> Announcements
+                                </div>
+                                <div class="phone-menu-item">
+                                    <span class="phone-icon">&#128100;</span> My Profile
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: CTA Banner -->
         <section class="bg-navy" style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);">
             <div class="container text-center">
                 <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 24px; margin-bottom: 8px;">S.Y. 2025–2026</div>

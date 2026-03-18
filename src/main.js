@@ -308,6 +308,19 @@ function initPageAnimations() {
     });
   });
 
+  // ── App Download Section
+  const appSection = document.querySelector('.app-download-section');
+  if (appSection) {
+    gsap.from('.app-download-content > *', {
+      scrollTrigger: { trigger: '.app-download-section', start: 'top 80%', toggleActions: 'play none none none' },
+      opacity: 0, x: -25, stagger: 0.08, duration: 0.5,
+    });
+    gsap.from('.phone-mockup', {
+      scrollTrigger: { trigger: '.app-download-section', start: 'top 80%', toggleActions: 'play none none none' },
+      opacity: 0, y: 40, scale: 0.9, duration: 0.7, delay: 0.3,
+    });
+  }
+
   // ── Affiliation Badges
   document.querySelectorAll('.aff-badge').forEach((badge, i) => {
     gsap.from(badge, {
