@@ -75,23 +75,23 @@ export function content() {
                         <div class="grid grid-4 gap-16 mb-24">
                             <div class="card text-center" style="padding: 16px; border: 1px solid var(--gold);">
                                 <h5 style="margin-bottom: 8px;">STEM</h5>
-                                <div style="font-size: 12px; color: var(--text-muted);">Science, Technology, Engineering, Math</div>
-                                <div style="font-size: 10px; color: var(--danger); margin-top: 8px;">[Confirm availability]</div>
+                                <div style="font-size: 12px; color: var(--text-muted); font-weight: bold; margin-bottom: 8px;">Science, Technology, Engineering & Mathematics</div>
+                                <div style="font-size: 11px; color: var(--text-body);">Intends to prepare students for highly technical and science-related collegiate programs in the future.</div>
                             </div>
                             <div class="card text-center" style="padding: 16px; border: 1px solid var(--gold);">
                                 <h5 style="margin-bottom: 8px;">HUMSS</h5>
-                                <div style="font-size: 12px; color: var(--text-muted);">Humanities & Social Sciences</div>
-                                <div style="font-size: 10px; color: var(--danger); margin-top: 8px;">[Confirm availability]</div>
+                                <div style="font-size: 12px; color: var(--text-muted); font-weight: bold; margin-bottom: 8px;">Humanities and Social Sciences</div>
+                                <div style="font-size: 11px; color: var(--text-body);">Intends to prepare students in careers related to liberal arts, social sciences, and communication.</div>
                             </div>
                             <div class="card text-center" style="padding: 16px; border: 1px solid var(--gold);">
                                 <h5 style="margin-bottom: 8px;">ABM</h5>
-                                <div style="font-size: 12px; color: var(--text-muted);">Accountancy, Business, Management</div>
-                                <div style="font-size: 10px; color: var(--danger); margin-top: 8px;">[Confirm availability]</div>
+                                <div style="font-size: 12px; color: var(--text-muted); font-weight: bold; margin-bottom: 8px;">Accountancy, Business & Management</div>
+                                <div style="font-size: 11px; color: var(--text-body);">Intends to prepare students for office management and other business-related career prospects.</div>
                             </div>
                             <div class="card text-center" style="padding: 16px; border: 1px solid var(--gold);">
                                 <h5 style="margin-bottom: 8px;">TVL</h5>
-                                <div style="font-size: 12px; color: var(--text-muted);">Technical-Vocational Livelihood</div>
-                                <div style="font-size: 10px; color: var(--danger); margin-top: 8px;">[Confirm availability]</div>
+                                <div style="font-size: 12px; color: var(--text-muted); font-weight: bold; margin-bottom: 8px;">Technical-Vocational Livelihood</div>
+                                <div style="font-size: 11px; color: var(--text-body);">Provides practical, specialized technical skills designed for immediate employment or entrepreneurship.</div>
                             </div>
                         </div>
 

@@ -1,13 +1,12 @@
-export const title = 'Home | East Visayan Adventist Academy';
-export const description = 'East Visayan Adventist Academy (EVAA) is a Christ-centered complete secondary boarding school in Javier, Leyte, nurturing mind, body, and spirit.';
+export const title = "Home | East Visayan Adventist Academy";
+export const description =
+    "East Visayan Adventist Academy (EVAA) is a Christ-centered complete secondary boarding school in Javier, Leyte, nurturing mind, body, and spirit.";
 
 export function content() {
-  return `
+    return `
         <!-- Section 1: Hero -->
         <section class="hero">
-            <video class="hero-video" autoplay muted loop playsinline preload="auto">
-                <source src="hero.mp4" type="video/mp4">
-            </video>
+            <video class="hero-video" src="/heror.mp4" autoplay loop muted playsinline preload="auto"></video>
             <div class="hero-overlay"></div>
             <div class="hero-bottom-rule"></div>
             <div class="container hero-content">
@@ -64,7 +63,7 @@ export function content() {
                 <div class="section-label">Why EVAA</div>
                 <h2 class="section-title">Forming the Whole Person</h2>
                 <div class="title-rule"></div>
-                
+
                 <p class="section-subtitle">Discover why families across Eastern Visayas choose EVAA for a holistic, Christ-centered education that develops mind, body, and spirit.</p>
 
                 <div class="features-row mt-32">
@@ -117,7 +116,7 @@ export function content() {
                     <button class="btn-carousel next btn-carousel-action" aria-label="Next">❯</button>
                 </div>
                 <div class="carousel-track">
-                    
+
                     <!-- Card 1: JHS -->
                     <div class="carousel-card" tabindex="0">
                         <div class="card-ribbon"></div>
@@ -141,63 +140,63 @@ export function content() {
                     <!-- Card 2: STEM -->
                     <div class="carousel-card" tabindex="0">
                         <div class="card-ribbon"></div>
-                        <div class="card-bg"></div>
+                        <div class="card-bg" style="background-image: url('/shs-stem.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay"></div>
                         <div class="card-wash"></div>
                         <div class="card-top">
                             <div class="card-pretitle">Academic Track</div>
                             <h3 class="card-title">STEM</h3>
-                            <div class="card-subtitle">Science, Tech, Engineering & Math</div>
+                            <div class="card-subtitle">Science, Technology, Engineering & Mathematics</div>
                         </div>
                         <div class="card-content">
                             <ul class="card-bullets">
                                 <li>✓ DepEd Accredited</li>
                                 <li>✓ Advanced Labs</li>
                             </ul>
-                            <p class="card-desc">Prepares students for demanding global service as researchers, engineers, and healthcare professionals. Integrating faith into scientific inquiry and innovation.</p>
+                            <p class="card-desc">Intends to prepare students for highly technical and science-related collegiate programs in the future.</p>
                         </div>
                     </div>
 
                     <!-- Card 3: HUMSS -->
                     <div class="carousel-card" tabindex="0" data-initial-active>
                         <div class="card-ribbon"></div>
-                        <div class="card-bg"></div>
+                        <div class="card-bg" style="background-image: url('/shs-humss.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay"></div>
                         <div class="card-wash"></div>
                         <div class="card-top">
                             <div class="card-pretitle">Academic Track</div>
                             <h3 class="card-title">HUMSS</h3>
-                            <div class="card-subtitle">Humanities & Social Sciences</div>
+                            <div class="card-subtitle">Humanities and Social Sciences</div>
                         </div>
                         <div class="card-content">
                             <ul class="card-bullets">
                                 <li>✓ DepEd Accredited</li>
                                 <li>✓ Future Civic Leaders</li>
                             </ul>
-                            <p class="card-desc">Focuses on communication, education, and social sciences. Empowers students to pursue careers in law, public service, teaching, and pastoral ministry.</p>
+                            <p class="card-desc">Intends to prepare students in careers related to liberal arts, social sciences, and communication.</p>
                         </div>
                     </div>
 
                     <!-- Card 4: ABM -->
                     <div class="carousel-card" tabindex="0">
                         <div class="card-ribbon"></div>
-                        <div class="card-bg"></div>
+                        <div class="card-bg" style="background-image: url('/shs-abm.jpg'); background-size: cover; background-position: center;"></div>
                         <div class="card-overlay"></div>
                         <div class="card-wash"></div>
                         <div class="card-top">
                             <div class="card-pretitle">Academic Track</div>
                             <h3 class="card-title">ABM</h3>
-                            <div class="card-subtitle">Accountancy & Business Management</div>
+                            <div class="card-subtitle">Accountancy, Business & Management</div>
                         </div>
                         <div class="card-content">
                             <ul class="card-bullets">
                                 <li>✓ DepEd Accredited</li>
                                 <li>✓ Ethics in Business</li>
                             </ul>
-                            <p class="card-desc">Equips future business leaders and entrepreneurs with sound financial management skills, ethical business practices, and integrity rooted in Christian values.</p>
+                            <p class="card-desc">Intends to prepare students for office management and other business-related career prospects.</p>
                         </div>
                     </div>
-                    
+
                     <!-- Card 5: TVL -->
                     <div class="carousel-card" tabindex="0">
                         <div class="card-ribbon"></div>
@@ -265,7 +264,7 @@ export function content() {
                 <div class="section-label">News & Announcements</div>
                 <h2 class="section-title">Stay Updated</h2>
                 <div class="title-rule left"></div>
-                
+
                 <div class="grid" style="grid-template-columns: 1.8fr 1fr; gap: 40px; margin-top: 32px;">
                     <div class="news-list">
                         <div class="news-card">
@@ -287,16 +286,17 @@ export function content() {
                             <a href="/spiritual-life" data-link class="news-link">Read more →</a>
                         </div>
                         <div class="news-card">
+                            <img src="/announcement-may2025.jpg" alt="No School Transactions" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 8px;" />
                             <div class="news-meta">
-                                <span class="tag tag-pale">Events</span>
-                                <span style="font-size: 13px; color: var(--text-muted);">April 10, 2025</span>
+                                <span class="tag tag-pale">Announcements</span>
+                                <span style="font-size: 13px; color: var(--text-muted);">May 24, 2025</span>
                             </div>
-                            <h3>Recognition Day & Academic Awards</h3>
-                            <p style="color: var(--text-body); margin-bottom: 8px;">We proudly celebrate the hard work and achievements of our honor roll students. Families are warmly invited to attend this celebration of academic excellence, spiritual vitality, and stellar character.</p>
+                            <h3>No School Transactions</h3>
+                            <p style="color: var(--text-body); margin-bottom: 8px;">Please be informed that there will be no school transactions within this week, from May 26 to June 3, 2025. Offices will resume on Wednesday, June 4, 2025.</p>
                             <a href="/campus-life" data-link class="news-link">Read more →</a>
                         </div>
                     </div>
-                    
+
                     <div>
                         <div class="calendar-widget">
                             <div class="calendar-header">Upcoming Events</div>
@@ -421,9 +421,9 @@ export function content() {
         <!-- Section 9: CTA Banner -->
         <section class="bg-navy" style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);">
             <div class="container text-center">
-                <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 24px; margin-bottom: 8px;">S.Y. 2025–2026</div>
-                <h2 style="color: var(--white); font-size: 42px; margin-bottom: 16px;">Begin Your Journey at EVAA</h2>
-                <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; font-size: 18px;">Discover a place where faith, knowledge, and lifelong friendships intertwine. We invite you to be part of our vibrant Christian academic community.</p>
+                <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold); font-size: 24px; margin-bottom: 8px;">CHOOSE EVAA SENIOR HIGH SCHOOL</div>
+                <h2 style="color: var(--white); font-size: 42px; margin-bottom: 16px;">Experience Life in Academe</h2>
+                <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; font-size: 18px;">Press Onwards. Build Dreams. Create New Trails.</p>
                 <div class="btn-group justify-content-center">
                     <a href="/admissions" data-link class="btn-primary">Apply Now</a>
                     <a href="/contact" data-link class="btn-outline">Contact the Registrar</a>
