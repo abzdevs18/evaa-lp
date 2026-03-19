@@ -16,12 +16,7 @@ export function renderHeader() {
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="nav-brand" data-link>
-                <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 0 L100 20 L100 60 C100 90 50 120 50 120 C50 120 0 90 0 60 L0 20 Z" fill="currentColor" stroke="#FFD600" stroke-width="4"/>
-                    <rect x="46" y="20" width="8" height="60" fill="#FFD600"/>
-                    <rect x="30" y="40" width="40" height="8" fill="#FFD600"/>
-                    <path d="M30 90 Q50 100 70 90" fill="none" stroke="#FFD600" stroke-width="4"/>
-                </svg>
+                <img src="/logo_white.png" alt="EVAA Logo" style="width: 48px; height: auto; border-radius:50px;">
                 <div class="nav-brand-text">
                     <span class="nav-brand-large">EVAA</span>
                     <span class="nav-brand-small">East Visayan Adventist Academy</span>
