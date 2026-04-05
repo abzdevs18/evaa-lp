@@ -6,8 +6,8 @@ export function renderHeader() {
                 📞 +63 935 835 7254 &nbsp;&nbsp; ✉ info@evaa.edu.ph
             </div>
             <div class="topbar-right">
-                <a href="#">Student Portal</a> | 
-                <a href="#">Faculty</a> | 
+                <a href="https://evaa.gabay.online/login">Student Portal</a> | 
+                <a href="https://evaa.gabay.online/login">Faculty</a> | 
                 <a href="/alumni">Alumni</a> | 
                 <a href="https://facebook.com/eastvisayanadventistacademyofleyte" target="_blank" rel="noopener">Facebook ↗</a>
             </div>
